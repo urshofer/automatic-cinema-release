@@ -1,0 +1,9 @@
+[submodule "automatic-cinema-playback"]
+	path = automatic-cinema-playback
+	url = https://github.com/urshofer/automatic-cinema-playback
+[submodule "automatic-cinema-controller"]
+	path = automatic-cinema-controller
+	url = https://github.com/urshofer/automatic-cinema-controller
+[submodule "automatic-cinema-server"]
+	path = automatic-cinema-server
+	url = https://github.com/urshofer/automatic-cinema-server

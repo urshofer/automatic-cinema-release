@@ -1,0 +1,24 @@
+<!--
+	Automatic Cinema API Endpoint
+-->
+<URL>http://localhost:3000</URL>
+<!--
+	Login Username for the Automatic Cinema API
+-->
+<USER>test</USER>
+<!--
+	Login Key for the Automatic Cinema API
+-->
+<PASS>test</PASS>
+<!--
+	Network Port for local communication. If you change it,
+    change the port of the player as well.
+-->
+<PORT>20000</PORT>
+<!--
+	Multicast Ip Address. In most cases, there's no need to
+    change it unless you have another application running 
+	communication over udp multicast and using exact the same
+	address.
+-->
+<IP>226.1.1.2</IP>

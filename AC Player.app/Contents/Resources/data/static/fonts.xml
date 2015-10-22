@@ -1,0 +1,15 @@
+<fonts>
+    <gui>Roboto-Gui.ttf</gui>
+    <text>Roboto-Medium.ttf</text>
+    <limit_0>-1000.000000000</limit_0>
+    <limit_1>1000.000000000</limit_1>
+    <limit_2>2000.000000000</limit_2>
+    <limit_3>4000.000000000</limit_3>
+    <left_offset>0</left_offset>
+    <top_offset>128</top_offset>
+    <sound_mix_video>0.5</sound_mix_video>
+    <sound_mix_audio>0.5</sound_mix_audio>
+    <sound_mix_minvolume>0.0</sound_mix_minvolume>
+    <sound_mix_maxvolume>1.0</sound_mix_maxvolume>
+    <enable_kinekt>false</enable_kinekt>
+</fonts>

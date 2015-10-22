@@ -1,0 +1,16 @@
+<settings>
+    <support_media>
+        <video>1</video>
+        <audio>1</audio>
+        <text>1</text>
+    </support_media>
+    <fullscreen>0</fullscreen>
+    <drawlogo>0</drawlogo>
+    <verbose>0</verbose>
+    <baseport>20000</baseport>
+    <ip>226.1.1.2</ip>
+    <channel>
+        <name>Audio</name>
+        <name>Video</name>
+    </channel>
+</settings>

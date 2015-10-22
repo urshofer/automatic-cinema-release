@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Automatic Cinema v3 - API</title>
+	<style type="text/css" media="screen">
+	html {
+		background: #CCC;
+		padding: 40px;
+	}
+	body {
+		font: normal normal normal 1em Helvetica,Arial, sans-serif;
+		padding: 20px;
+		background: #FFF;
+	}
+	p:first-line {
+		margin-bottom: 0.5em;
+		font-weight: bold;
+		line-height: 1.5em;
+	}		
+	p {
+		margin-top: 1em;		
+	}
+	h1 {
+		margin: -20px;
+		background: #444;
+		color: #FFF;
+		padding: 20px;
+		margin-bottom: 2em;
+		padding-bottom: 2em;
+		
+	}
+	</style>
+</head>
+<body id="ac3">
+	<h1>Automatic Cinema Server</h1>
+	<h2>This is the JSON API Server.</h2>
+	<p>The Automatic Cinema Server stores the data, controls the narration and feeds controller, playback server and players.</p>
+<pre>
+	
+/* 
+	Login
+	-----
+
+	Creates a new Account if user and Name is not known.
+	Returns a Session Id otherwise
+
+ */
+
+POST /Login
+
+/* 
+	Check Session
+	-------------
+
+	Checks if a session Id is Valid
+	Returns true or an error
+
+ */
+
+GET /CheckSession/:checkSession
+
+/* 
+  	Store
+	-----
+  	Updates data
+  
+*/
+
+POST /Store/:checkSession/:function
+
+/* 
+  	LoadOptions
+	-----------
+  	Loads Available Options
+  
+*/
+
+GET /LoadOptions/:checkSession
+
+/* 
+  	LoadConfig
+	----------
+  	Sends the current configuration
+  
+*/
+
+GET /LoadConfig/:checkSession
+
+/* 
+  	Channels
+	--------
+  	Loads Available Channels, without a channel list channels available
+  
+*/
+
+GET /Channels/:checkSession/:channel
+GET /Channels/:checkSession
+
+/* 
+  	Toggle
+	------
+  	Toggles the State of channels
+  
+*/
+
+
+GET /Toggle/:checkSession/:channel/:state
+
+/* 
+  	Delete
+	------
+  	Deletes a show, style, target, channel
+  
+*/
+
+DEL /Delete/:checkSession/:type/:name
+
+/* 
+  	Rename
+	------
+  	Renames a show, style, target, channel
+  
+*/
+
+POST /Rename/:checkSession/:type/:name
+
+/* 
+  	Load
+	----
+    Loads a show, style, target, channel
+  
+*/
+
+GET /Load/:checkSession/:type
+
+/* 
+  	StoreFile
+	---------
+    Stores a File with a multi part file form
+  
+*/
+
+POST /StoreFile/:checkSession
+
+/* 
+  	Preview
+	-------
+    Sends a preview file
+  
+*/
+
+GET /Preview/:checkSession/:thumb
+
+/* 
+  	Preview
+	-------
+    Sends a preview file
+  
+*/
+
+GET /Download/:checkSession/:file
+
+/* 
+  	File List
+	---------
+    Sends a file list
+  
+*/
+
+GET /List/:checkSession
+
+/* 
+  	Next
+	----
+  	Get Next Clip in Narration
+  
+*/
+
+GET /Next/:checkSession/:channel
+
+/* 
+  	Reset
+	-----
+  	Resets the channel
+  
+*/
+
+GET /Reset/:checkSession/:channel
+
+/* 
+  	Is Reset
+	----
+  	Get Next Clip in Narration
+  
+*/
+
+POST /SyncState/:checkSession
+
+/* 
+  	Is New Timeline
+	---------------
+	Returns true if a timeline is restarted,
+	otherwise false
+  
+*/
+
+GET /IsNewTimeline/:checkSession/:channel
+
+/* 
+  	Timeline
+	--------
+	Returns the timeline data of a channel
+  
+*/
+
+GET /Timeline/:checkSession/:channel
+
+/* 
+  	HasMaster
+	---------------
+	Returns false if a channel is master,
+	otherwise returns the name of the master channel
+  
+*/
+
+GET /HasMaster/:checkSession/:channel
+
+/* 
+  	Preroll
+	-------
+  	Sends the global preroll value in ms
+  
+*/
+
+GET /Preroll/:checkSession
+
+/* 
+  	Rate
+	----
+  	Sends the global frames per second rate
+  
+*/
+
+GET /Rate/:checkSession
+
+/* 
+  	Texttiming
+	----------
+  	Sends the global text timings: lines per screen and
+  
+*/
+
+GET /Texttiming/:checkSession
+
+</pre>
+</body>

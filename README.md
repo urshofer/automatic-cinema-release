@@ -1,6 +1,8 @@
 Automatic Cinema Release Repository
 ===================================
 
+[![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg)](https://github.com/urshofer/automatic-cinema-release)
+
 This is the Automatic Cinema Release Repository. It contains the binaries of all components:
 
 - AC Server, the data hoster (javascript, node.js based)
